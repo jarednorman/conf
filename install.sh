@@ -1,3 +1,3 @@
 #!/bin/sh
 set -ex
-stow alacritty zsh -t ~
+stow alacritty base16 git zsh -t ~

@@ -1,0 +1,59 @@
+[init]
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore.global
+#  pager = diff-so-fancy | less --tabs=4 -RFX
+[credential]
+  helper = cache --timeout=3600
+[merge]
+  tool = splice
+  conflictstyle = diff3
+[mergetool]
+  keepBackup = false
+[mergetool "splice"]
+  cmd = "vim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
+  trustExitCode = true
+[user]
+  name = Jared Norman
+  email = jared@super.gd
+[github]
+  user = jarednorman
+[alias]
+  a = add
+  b = branch
+  bl = branch --sort=-committerdate
+  c = commit -v
+  ca = commit -v --amend
+  cf = commit --fixup
+  cn = commit -v --no-verify
+  co = checkout
+  cb = checkout -b
+  d = diff
+  ds = diff --staged
+  f = fetch
+  ff = merge --ff-only
+  l = log --graph --pretty=format:'%C(7)%h %C(8)→ %C(15)%s %C(4)%aN %C(2)%cd%C(1)%d' --abbrev-commit --date=relative
+  m = merge
+  r = rebase
+  ra = rebase --abort
+  rc = rebase --continue
+  ri = rebase -i
+  s = status
+  ss = status -s
+[rebase]
+  autosquash = true
+[color]
+  branch       = auto
+  diff         = auto
+  status       = auto
+[color "branch"]
+  current      = yellow reverse
+  local        = yellow
+  remote       = green
+[color "diff"]
+  meta         = blue
+  frag         = yellow
+  old          = red
+  new          = green
+[color "status"]
+  header       = magenta bold
