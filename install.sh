@@ -1,3 +1,3 @@
 #!/bin/sh
 set -ex
-stow zsh -t ~
+stow alacritty zsh -t ~
