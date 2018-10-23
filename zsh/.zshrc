@@ -81,6 +81,11 @@ setprompt() {
 }
 setprompt
 
+# Chruby
+########
+source $HOME/.zsh/vendor/chruby/chruby.sh
+source $HOME/.zsh/vendor/chruby/auto.sh
+
 # History Substring Search
 ##########################
 source $HOME/.zsh/vendor/zsh-history-substring-search.zsh
