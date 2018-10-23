@@ -22,6 +22,12 @@ function current_branch() {
   echo ${ref#refs/heads/}
 }
 
+function open-gem() {
+  GEM=$(bundle list | cut -f 4 -d' ' | fzf)
+  DESTINATION=$(bundle show $GEM)
+  tmux new-window -c $DESTINATION -n $GEM
+}
+
 # Aliases
 #########
 alias g="git"
