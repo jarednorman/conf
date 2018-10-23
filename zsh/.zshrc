@@ -11,6 +11,7 @@ bindkey -v
 ######
 path=(
   /usr/local/{bin,sbin}
+  $home/.cargo/bin
   $path
 )
 
@@ -85,6 +86,11 @@ setprompt
 ########
 source $HOME/.zsh/vendor/chruby/chruby.sh
 source $HOME/.zsh/vendor/chruby/auto.sh
+
+# nvm
+#####
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # History Substring Search
 ##########################
