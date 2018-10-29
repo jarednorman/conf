@@ -10,8 +10,9 @@ bindkey -v
 # Path
 ######
 path=(
+  $HOME/.bin
   /usr/local/{bin,sbin}
-  $home/.cargo/bin
+  $HOME/.cargo/bin
   $path
 )
 
@@ -31,10 +32,11 @@ function open-gem() {
 
 # Aliases
 #########
-alias g="git"
-alias ls="ls -G"
+alias bx="bundle exec"
 alias c='cd ~/Codes/$(ls ~/Codes | fzf)'
 alias dev='ssh -t `grep -w -i "Host" ~/.ssh/config | sed 's/Host//' | grep -i "\-dev$" | fzf`'
+alias g="git"
+alias ls="ls -G"
 alias myip="ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'"
 
 # Completion Stuff
