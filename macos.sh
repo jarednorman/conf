@@ -75,7 +75,7 @@ defaults write com.apple.helpviewer DevMode -bool true
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 # Restart automatically if the computer freezes
-sudo systemsetup -setrestartfreeze on
+sudo systemsetup -setrestartfreeze off
 
 # Sleep after an hour of inactivity.
 sudo systemsetup -setcomputersleep 60 > /dev/null
@@ -101,8 +101,8 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # SSD-specific tweaks
 #####################
 
-# Disable hibernation (speeds up entering sleep mode)
-sudo pmset -a hibernatemode 0
+# Enable hibernation mode 3 (store a copy of memory to disk and keep memory powered up)
+sudo pmset -a hibernatemode 3
 
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input
 #############################################################
@@ -611,7 +611,7 @@ defaults write com.apple.SoftwareUpdate ConfigDataInstall -int 1
 defaults write com.apple.commerce AutoUpdate -bool true
 
 # Allow the App Store to reboot machine on macOS updates
-defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
+defaults write com.apple.commerce AutoUpdateRestartRequired -bool false
 
 # Photos
 ########
