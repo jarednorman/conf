@@ -21,7 +21,7 @@
 [alias]
   a = add
   b = branch
-  bl = branch --sort=-committerdate
+  bl = branch --sort=-committerdate -vv
   c = commit -v
   ca = commit -v --amend
   cf = commit --fixup
@@ -34,6 +34,7 @@
   ff = merge --ff-only
   l = log --graph --pretty=format:'%C(7)%h %C(8)→ %C(15)%s %C(4)%aN %C(2)%cd%C(1)%d' --abbrev-commit --date=relative
   m = merge
+  pf = push --force-with-lease
   r = rebase
   ra = rebase --abort
   rc = rebase --continue
