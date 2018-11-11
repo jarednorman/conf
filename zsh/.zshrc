@@ -30,6 +30,9 @@ function open-gem() {
   tmux new-window -c $DESTINATION -n $GEM
 }
 
+
+function f() { ag --nocolor -l -g "$1" "${2:-.}"  }
+
 # Aliases
 #########
 alias bx="bundle exec"
