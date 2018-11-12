@@ -35,5 +35,4 @@ tags
 **/vendor/bundle
 vendor/bundle
 .bundle/config
-.vimrc
 .vscode
