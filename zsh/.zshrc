@@ -11,6 +11,7 @@ bindkey -v
 ######
 path=(
   $HOME/.bin
+  $HOME/.fzf/bin
   /usr/local/{bin,sbin}
   $HOME/.cargo/bin
   $path
