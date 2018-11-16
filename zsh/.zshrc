@@ -65,7 +65,7 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' check-for-staged-changes true
 zstyle ':vcs_info:*' stagedstr '%F{2}+'
 zstyle ':vcs_info:*' unstagedstr '%F{1}-'
-zstyle ':vcs_info:git*' formats "%F{cyan}%r%F{green}@%F{yellow}%b%F{13}[%u%c%F{14}%m%F{13}]%F{4}/%F{5}%S%{$reset_color%}"
+zstyle ':vcs_info:git*' formats "%F{20}[%F{magenta}%b%u%c%F{14}%m%F{20}]%{$reset_color%}"
 precmd() { vcs_info }
 
 setprompt() {
@@ -73,16 +73,16 @@ setprompt() {
 
   PS1=${(j::Q)${(Z:Cn:):-$'
     %F{cyan}%n%f
-    %F{green}@%f
-    %F{yellow}%m%f
+    %F{cyan}@%f
+    %F{blue}%m%f
     %F{blue}:%f
     %F{magenta}%~%f
+    ${vcs_info_msg_0_}
+    %F{20}%(1j. (%j).)%f
     "\n"
-    %F{11}$%f
+    %(?.%F{green}.%F{red})$%f
     " "
   '}}
-
-  RPROMPT=$'${vcs_info_msg_0_} %F{14}%(1j. (%j sleeping).)%f'
 }
 setprompt
 
