@@ -72,11 +72,11 @@ setprompt() {
   setopt prompt_subst
 
   PS1=${(j::Q)${(Z:Cn:):-$'
-    %F{cyan}%n%f
-    %F{cyan}@%f
-    %F{blue}%m%f
-    %F{blue}:%f
-    %F{magenta}%~%f
+    %F{green}%n%f
+    %F{green}@%f
+    %F{cyan}%m%f
+    %F{cyan}:%f
+    %F{blue}%~%f
     ${vcs_info_msg_0_}
     %F{20}%(1j. (%j).)%f
     "\n"
