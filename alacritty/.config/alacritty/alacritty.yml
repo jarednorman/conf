@@ -82,21 +82,21 @@ tabspaces: 8
 font:
   # Normal (roman) font face
   normal:
-    family: Office Code Pro
+    family: Input
     style: Regular
 
   # Italic font face
   bold:
-    family: Office Code Pro
+    family: Input
     style: Bold
 
   # Italic font face
   italic:
-    family: Office Code Pro
+    family: Input
     style: Italic
 
   # Point size
-  size: 15.0
+  size: 14.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
