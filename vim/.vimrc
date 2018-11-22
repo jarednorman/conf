@@ -21,6 +21,7 @@ Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'rust-lang/rust.vim'
 
 Plug 'chriskempson/base16-vim'
 
@@ -115,6 +116,9 @@ nnoremap <leader><leader> :FZF<cr>
 
 " Test running! I promise I'll do something more sensible at some point.
 nnoremap <leader>t :!bundle exec rspec %<cr>
+
+" Rust
+nnoremap <leader>r :!cargo run<cr>
 
 " Gem search
 function! GemSearch()
