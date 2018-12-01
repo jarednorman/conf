@@ -50,10 +50,6 @@ zmodload zsh/complist
 autoload -Uz compinit
 compinit
 
-# Base16 Jardo
-##############
-source $HOME/.zsh/colors.zsh
-
 # Prompt
 #------------------------------
 autoload -U colors zsh/terminfo
@@ -65,7 +61,7 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' check-for-staged-changes true
 zstyle ':vcs_info:*' stagedstr '%F{2}+'
 zstyle ':vcs_info:*' unstagedstr '%F{1}-'
-zstyle ':vcs_info:git*' formats "%F{20}[%F{magenta}%b%u%c%F{14}%m%F{20}]%{$reset_color%}"
+zstyle ':vcs_info:git*' formats "%F{12}[%F{13}%b%B%u%c%F{14}%m%{$reset_color%}%F{12}]%{$reset_color%}"
 precmd() { vcs_info }
 
 setprompt() {
@@ -78,7 +74,7 @@ setprompt() {
     %F{cyan}:%f
     %F{blue}%~%f
     ${vcs_info_msg_0_}
-    %F{20}%(1j. (%j).)%f
+    %F{12}%(1j. (%j).)%f
     "\n"
     %(?.%F{green}.%F{red})$%f
     " "

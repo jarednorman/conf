@@ -22,8 +22,9 @@ Plug 'leafgarland/typescript-vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
 
-Plug 'chriskempson/base16-vim'
+Plug 'altercation/vim-colors-solarized'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -32,10 +33,9 @@ call plug#end()
 filetype plugin indent on
 
 " Make it pretty!
-syntax on
-set background=dark
-let base16colorspace=256
-color base16-default-dark
+syntax enable
+set background=light
+colorscheme solarized
 
 " Built in Vim settings.
 set shell=$SHELL
