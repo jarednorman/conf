@@ -117,8 +117,8 @@ nnoremap <leader><leader> :FZF<cr>
 " Test running! I promise I'll do something more sensible at some point.
 nnoremap <leader>t :!bundle exec rspec %<cr>
 
-" Rust
-nnoremap <leader>r :!cargo run<cr>
+" Ruby
+nnoremap <leader>r :!bundle exec ./%<cr>
 
 " Gem search
 function! GemSearch()
