@@ -61,6 +61,10 @@ set list listchars=tab:→\ ,trail:•
 set fillchars+=vert:\
 set grepprg=rg\ --vimgrep
 
+" ALE, chill out
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
@@ -115,6 +119,9 @@ nnoremap <leader>/ :let @/=""<cr>
 
 " FZF support!
 nnoremap <leader><leader> :FZF<cr>
+
+" Use Ale to x-plain what's under the cursor.
+nnoremap <leader>x :ALEHover<cr>
 
 " Test running! I promise I'll do something more sensible at some point.
 nnoremap <leader>t :!bundle exec rspec %<cr>
