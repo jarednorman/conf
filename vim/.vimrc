@@ -29,6 +29,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'w0rp/ale'
+
 call plug#end()
 filetype plugin indent on
 
