@@ -46,7 +46,7 @@ window:
   #     - none: Neither borders nor title bar
   #     - buttonless: Title bar, transparent background and title bar buttons
   #     - transparent: Title bar, transparent background, but no title bar buttons
-  decorations: none
+  # decorations: none
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -82,21 +82,21 @@ tabspaces: 8
 font:
   # Normal (roman) font face
   normal:
-    family: Fira Code
+    family: Office Code Pro
     style: Regular
 
   # Italic font face
   bold:
-    family: Fira Code
+    family: Office Code Pro
     style: Bold
 
   # Italic font face
   italic:
-    family: Fira Code
+    family: Office Code Pro
     style: Italic
 
   # Point size
-  size: 13
+  size: 13.5
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.

@@ -31,13 +31,13 @@ function open-gem() {
   tmux new-window -c $DESTINATION -n $GEM
 }
 
-
 function f() { ag --nocolor -l -g "$1" "${2:-.}"  }
 
 # Aliases
 #########
 alias bx="bundle exec"
 alias c='cd ~/Codes/$(ls ~/Codes | fzf)'
+alias cpriv='cd ~/Codes/private/$(ls ~/Codes/private | fzf)'
 alias dev='ssh -t `grep -w -i "Host" ~/.ssh/config | sed 's/Host//' | grep -i "\-dev$" | fzf`'
 alias g=git
 alias ls="ls -G"
