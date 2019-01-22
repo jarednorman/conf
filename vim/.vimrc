@@ -64,6 +64,7 @@ set grepprg=rg\ --vimgrep
 " ALE, chill out
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
+let g:ale_javascript_eslint_suppress_missing_config = 1
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
