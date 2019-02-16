@@ -60,6 +60,7 @@ set lazyredraw
 set list listchars=tab:→\ ,trail:•
 set fillchars+=vert:\
 set grepprg=rg\ --vimgrep
+set shortmess=atI
 
 " ALE, chill out
 let g:ale_lint_on_text_changed = 'never'
