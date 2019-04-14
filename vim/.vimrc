@@ -12,7 +12,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 
 Plug 'mileszs/ack.vim'
-Plug '~/.fzf'
+Plug '/usr/local/opt/fzf'
 
 Plug 'vim-ruby/vim-ruby'
 Plug 'jason0x43/vim-js-indent'
@@ -130,6 +130,7 @@ nnoremap <leader>t :!bundle exec rspec %<cr>
 
 " Ruby
 nnoremap <leader>r :!bundle exec ./%<cr>
+nnoremap <leader>f :!bundle exec standardrb %<cr>
 
 " Gem search
 function! GemSearch()

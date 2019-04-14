@@ -87,10 +87,9 @@ setprompt
 source $HOME/.zsh/vendor/chruby/chruby.sh
 source $HOME/.zsh/vendor/chruby/auto.sh
 
-# nvm
-#####
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# fnm
+export PATH=$HOME/.fnm:$PATH
+eval "`fnm env --multi`"
 
 # History Substring Search
 ##########################
@@ -101,4 +100,3 @@ bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='bg=black,fg=white,bold'
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='bg=red,fg=white,bold'
-
