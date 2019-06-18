@@ -36,6 +36,8 @@ filetype plugin indent on
 
 " Make it pretty!
 syntax enable
+" set t_Co=256
+" let g:solarized_termcolors=256
 set background=light
 colorscheme solarized
 
@@ -126,11 +128,11 @@ nnoremap <leader><leader> :FZF<cr>
 nnoremap <leader>x :ALEHover<cr>
 
 " Test running! I promise I'll do something more sensible at some point.
-nnoremap <leader>t :!bundle exec rspec %<cr>
+nnoremap <leader>t :!clear; bundle exec rspec %<cr>
 
 " Ruby
-nnoremap <leader>r :!bundle exec ./%<cr>
-nnoremap <leader>f :!bundle exec standardrb %<cr>
+nnoremap <leader>r :!clear; bundle exec ./%<cr>
+nnoremap <leader>f :!clear; bundle exec standardrb %<cr>
 
 " Gem search
 function! GemSearch()
