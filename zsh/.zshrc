@@ -14,6 +14,8 @@ path=(
   $HOME/.fzf/bin
   /usr/local/{bin,sbin}
   $HOME/.cargo/bin
+  $HOME/.config/yarn/global/node_modules/.bin
+  $HOME/.fnm
   $path
 )
 
@@ -88,7 +90,6 @@ source $HOME/.zsh/vendor/chruby/chruby.sh
 source $HOME/.zsh/vendor/chruby/auto.sh
 
 # fnm
-export PATH=$HOME/.fnm:$PATH
 eval "`fnm env --multi`"
 
 # History Substring Search
