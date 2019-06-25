@@ -57,6 +57,7 @@ set wrap
 set wildmode=list:longest,list:full
 set splitright
 set splitbelow
+set timeoutlen=1000 ttimeoutlen=0
 set ttyfast
 set lazyredraw
 set list listchars=tab:→\ ,trail:•
