@@ -24,7 +24,7 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
 
-Plug 'altercation/vim-colors-solarized'
+Plug 'morhetz/gruvbox'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -39,7 +39,7 @@ syntax enable
 " set t_Co=256
 " let g:solarized_termcolors=256
 set background=light
-colorscheme solarized
+colorscheme gruvbox
 
 " Built in Vim settings.
 set shell=$SHELL
