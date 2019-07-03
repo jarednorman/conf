@@ -71,18 +71,19 @@ let g:ale_lint_on_enter = 0
 let g:ale_javascript_eslint_suppress_missing_config = 1
 
 " Airline
-let g:airline#extensions#tabline#enabled = 1
+let g:airline_extensions = ['branch', 'tabline']
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#show_tab_nr = 0
-let g:airline#extensions#tabline#show_tab_type = 0
-let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
-let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#right_alt_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#show_splits = 0
-let g:airline#extensions#branch#enabled = 0
+let g:airline#extensions#tabline#show_tab_nr = 0
+let g:airline#extensions#tabline#show_tab_type = 0
+let g:airline#extensions#tabline#show_tabs = 0
+let g:airline#extensions#tabline#tab_min_count = 2
 
 " Use ripgrep when available.
 if executable("rg")
