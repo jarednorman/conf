@@ -40,35 +40,44 @@ syntax enable
 " let g:solarized_termcolors=256
 set background=light
 colorscheme solarized
+hi VertSplit ctermbg=bg ctermfg=fg
+hi SignColumn ctermbg=7
+hi ALEErrorSign ctermfg=bg ctermbg=1 cterm=bold
 
 " Built in Vim settings.
-set shell=$SHELL
-set noswapfile
-set nobackup
-set noerrorbells visualbell t_vb=
 set expandtab
-set softtabstop=2
-set shiftwidth=2
-set scrolljump=15
+set fillchars+=vert:│
+set grepprg=rg\ --vimgrep
 set hlsearch
 set ignorecase
-set smartcase
-set wrap
-set wildmode=list:longest,list:full
-set splitright
-set splitbelow
-set timeoutlen=1000 ttimeoutlen=0
-set ttyfast
 set lazyredraw
 set list listchars=tab:→\ ,trail:•
-set fillchars+=vert:\
-set grepprg=rg\ --vimgrep
+set nobackup
+set noerrorbells visualbell t_vb=
+set noswapfile
+set number
+set scrolljump=15
+set shell=$SHELL
+set shiftwidth=2
 set shortmess=atI
+set smartcase
+set softtabstop=2
+set splitbelow
+set splitright
+set timeoutlen=1000 ttimeoutlen=0
+set ttyfast
+set wildmode=list:longest,list:full
+set wrap
 
 " ALE, chill out
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 let g:ale_javascript_eslint_suppress_missing_config = 1
+let g:ale_sign_error = get(g:, 'ale_sign_error', '!!')
+let g:ale_sign_style_error = get(g:, 'ale_sign_style_error', '??')
+let g:ale_sign_warning = get(g:, 'ale_sign_warning', '--')
+let g:ale_sign_style_warning = get(g:, 'ale_sign_style_warning', '??')
+let g:ale_sign_info = get(g:, 'ale_sign_info', '++')
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
