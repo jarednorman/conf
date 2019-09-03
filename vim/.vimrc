@@ -51,7 +51,7 @@ set grepprg=rg\ --vimgrep
 set hlsearch
 set ignorecase
 set lazyredraw
-set list listchars=tab:→\ ,trail:•
+set list listchars=tab:→\ ,trail:\ 
 set nobackup
 set noerrorbells visualbell t_vb=
 set noswapfile
