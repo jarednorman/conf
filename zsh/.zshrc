@@ -62,23 +62,18 @@ zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' check-for-staged-changes true
 zstyle ':vcs_info:*' stagedstr '%F{2}+'
-zstyle ':vcs_info:*' unstagedstr '%F{1}-'
-zstyle ':vcs_info:git*' formats "%F{12}[%F{13}%b%B%u%c%F{14}%m%{$reset_color%}%F{12}]%{$reset_color%}"
+zstyle ':vcs_info:*' unstagedstr '%F{9}-'
+zstyle ':vcs_info:git*' formats "%F{blue}@%b%u%c%m%{$reset_color%}"
 precmd() { vcs_info }
 
 setprompt() {
   setopt prompt_subst
 
   PS1=${(j::Q)${(Z:Cn:):-$'
-    %F{green}%n%f
-    %F{green}@%f
-    %F{cyan}%m%f
-    %F{cyan}:%f
-    %F{blue}%~%f
+    %F{cyan}%~%f
     ${vcs_info_msg_0_}
-    %F{12}%(1j. (%j).)%f
-    "\n"
-    %(?.%F{green}.%F{red})$%f
+    %F{yellow}%(1j.(%j).)%f
+    %(?.%F{13}.%F{9})$%f
     " "
   '}}
 }
