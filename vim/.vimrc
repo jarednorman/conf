@@ -55,7 +55,7 @@ set list listchars=tab:→\ ,trail:\
 set nobackup
 set noerrorbells visualbell t_vb=
 set noswapfile
-set number
+set nonumber
 set scrolljump=15
 set shell=$SHELL
 set shiftwidth=2
@@ -70,14 +70,17 @@ set wildmode=list:longest,list:full
 set wrap
 
 " ALE, chill out
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 0
+let g:ale_linters = {'ruby': ['standardrb']}
+let g:ale_fixers = {'ruby': ['standardrb']}
+
 let g:ale_javascript_eslint_suppress_missing_config = 1
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_text_changed = 'never'
 let g:ale_sign_error = get(g:, 'ale_sign_error', '!!')
-let g:ale_sign_style_error = get(g:, 'ale_sign_style_error', '??')
-let g:ale_sign_warning = get(g:, 'ale_sign_warning', '--')
-let g:ale_sign_style_warning = get(g:, 'ale_sign_style_warning', '??')
 let g:ale_sign_info = get(g:, 'ale_sign_info', '++')
+let g:ale_sign_style_error = get(g:, 'ale_sign_style_error', '??')
+let g:ale_sign_style_warning = get(g:, 'ale_sign_style_warning', '??')
+let g:ale_sign_warning = get(g:, 'ale_sign_warning', '--')
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
