@@ -83,19 +83,20 @@ let g:ale_sign_style_warning = get(g:, 'ale_sign_style_warning', '??')
 let g:ale_sign_warning = get(g:, 'ale_sign_warning', '--')
 
 " Airline
+let g:airline#extensions#branch#enabled = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#show_tab_nr = 0
-let g:airline#extensions#tabline#show_tab_type = 0
-let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
-let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#right_alt_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#show_splits = 0
+let g:airline#extensions#tabline#show_tab_count = 0
+let g:airline#extensions#tabline#show_tab_nr = 0
+let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#tab_min_count = 2
-let g:airline#extensions#branch#enabled = 0
 
 " Use ripgrep when available.
 if executable("rg")
