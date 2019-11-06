@@ -25,6 +25,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
 
 Plug 'altercation/vim-colors-solarized'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -36,13 +37,13 @@ filetype plugin indent on
 
 " Make it pretty!
 syntax enable
-" set t_Co=256
-" let g:solarized_termcolors=256
-set background=light
-colorscheme solarized
-hi VertSplit ctermbg=bg ctermfg=fg
-hi SignColumn ctermbg=7
-hi ALEErrorSign ctermfg=bg ctermbg=1 cterm=bold
+let g:dracula_italic = 0
+set termguicolors
+colorscheme dracula
+" hi Normal ctermbg=None
+" hi VertSplit ctermbg=bg ctermfg=fg
+" hi SignColumn ctermbg=7
+" hi ALEErrorSign ctermfg=bg ctermbg=1 cterm=bold
 
 " Built in Vim settings.
 set expandtab
