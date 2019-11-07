@@ -30,7 +30,6 @@ function! airline#themes#{s:theme}#refresh()
   " Inactive
   let XX = airline#themes#get_highlight('Comment')
   let IA = [XX[0], N3[1], '', '', '']
-  echo IA
 
   " Error
   let ER = [ '', '', 234, 167 ]
