@@ -24,8 +24,7 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
 
-Plug 'altercation/vim-colors-solarized'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'chriskempson/base16-vim'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -37,12 +36,13 @@ filetype plugin indent on
 
 " Make it pretty!
 syntax enable
-let g:dracula_italic = 0
 set termguicolors
-colorscheme dracula
-" hi Normal ctermbg=None
-" hi VertSplit ctermbg=bg ctermfg=fg
-" hi SignColumn ctermbg=7
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+hi VertSplit guibg=#3c3836 guifg=#3c3836
+" FIXME: Needs gruvbox colours
 " hi ALEErrorSign ctermfg=bg ctermbg=1 cterm=bold
 
 " Built in Vim settings.
@@ -52,7 +52,7 @@ set grepprg=rg\ --vimgrep
 set hlsearch
 set ignorecase
 set lazyredraw
-set list listchars=tab:→\ ,trail:\ 
+set list listchars=tab:→\ ,trail:\ "
 set nobackup
 set noerrorbells visualbell t_vb=
 set noswapfile
@@ -84,6 +84,7 @@ let g:ale_sign_style_warning = get(g:, 'ale_sign_style_warning', '??')
 let g:ale_sign_warning = get(g:, 'ale_sign_warning', '--')
 
 " Airline
+let g:airline_theme = 'jardo16'
 let g:airline#extensions#branch#enabled = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
