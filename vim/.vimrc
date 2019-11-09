@@ -41,7 +41,9 @@ if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
-hi VertSplit guibg=#3c3836 guifg=#3c3836
+let CLRS = airline#themes#get_highlight('CursorLine')
+" hi VertSplit guibg=CLRS[0] guifg=CLRS[0]
+exec "hi VertSplit guibg=" . CLRS[1] . " guifg=" . CLRS[1]
 " FIXME: Needs gruvbox colours
 " hi ALEErrorSign ctermfg=bg ctermbg=1 cterm=bold
 
