@@ -1,3 +1,3 @@
 #!/bin/sh
 set -ex
-stow alacritty git karabiner misc ruby tmux vim zsh -t ~
+stow alacritty git karabiner hammerspoon misc ruby tmux vim zsh -t ~
