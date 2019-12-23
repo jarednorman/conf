@@ -27,7 +27,7 @@ Plug 'vim-ruby/vim-ruby'
 
 " One Day
 " Plug '~/Codes/vim-whitetail'
-Plug 'rking/vim-detailed'
+Plug 'jarednorman/vim-detailed'
 
 Plug 'w0rp/ale'
 
