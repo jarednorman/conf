@@ -14,15 +14,16 @@ Plug 'tpope/vim-unimpaired'
 Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
-Plug 'vim-ruby/vim-ruby'
+Plug 'embear/vim-uncrustify'
 Plug 'jason0x43/vim-js-indent'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'leafgarland/typescript-vim'
 Plug 'kchmck/vim-coffee-script'
+Plug 'leafgarland/typescript-vim'
 Plug 'mustache/vim-mustache-handlebars'
-Plug 'rust-lang/rust.vim'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
 Plug 'racer-rust/vim-racer'
+Plug 'rust-lang/rust.vim'
+Plug 'vim-ruby/vim-ruby'
 
 " One Day
 " Plug '~/Codes/vim-whitetail'
@@ -62,6 +63,9 @@ set timeoutlen=1000 ttimeoutlen=0
 set ttyfast
 set wildmode=list:longest,list:full
 set wrap
+
+" Uncrustify
+autocmd BufWritePre *.c call Uncrustify()
 
 " ALE, chill out
 let g:ale_linters = {'ruby': ['standardrb']}
