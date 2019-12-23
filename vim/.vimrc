@@ -25,9 +25,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
 
 Plug 'chriskempson/base16-vim'
-
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'rking/vim-detailed'
 
 Plug 'w0rp/ale'
 
@@ -36,16 +34,7 @@ filetype plugin indent on
 
 " Make it pretty!
 syntax enable
-set termguicolors
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
-let CLRS = airline#themes#get_highlight('CursorLine')
-" hi VertSplit guibg=CLRS[0] guifg=CLRS[0]
-exec "hi VertSplit guibg=" . CLRS[1] . " guifg=" . CLRS[1]
-" FIXME: Needs gruvbox colours
-" hi ALEErrorSign ctermfg=bg ctermbg=1 cterm=bold
+colo detailed
 
 " Built in Vim settings.
 set expandtab
@@ -84,23 +73,6 @@ let g:ale_sign_info = get(g:, 'ale_sign_info', '++')
 let g:ale_sign_style_error = get(g:, 'ale_sign_style_error', '??')
 let g:ale_sign_style_warning = get(g:, 'ale_sign_style_warning', '??')
 let g:ale_sign_warning = get(g:, 'ale_sign_warning', '--')
-
-" Airline
-let g:airline_theme = 'jardo16'
-let g:airline#extensions#branch#enabled = 0
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline#extensions#tabline#left_alt_sep = ''
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#right_alt_sep = ''
-let g:airline#extensions#tabline#right_sep = ''
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#show_close_button = 0
-let g:airline#extensions#tabline#show_splits = 0
-let g:airline#extensions#tabline#show_tab_count = 0
-let g:airline#extensions#tabline#show_tab_nr = 0
-let g:airline#extensions#tabline#show_tab_type = 0
-let g:airline#extensions#tabline#tab_min_count = 2
 
 " Use ripgrep when available.
 if executable("rg")
