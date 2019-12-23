@@ -24,7 +24,8 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
 
-Plug 'chriskempson/base16-vim'
+" One Day
+" Plug '~/Codes/vim-whitetail'
 Plug 'rking/vim-detailed'
 
 Plug 'w0rp/ale'
@@ -34,6 +35,7 @@ filetype plugin indent on
 
 " Make it pretty!
 syntax enable
+set t_Co=256
 colo detailed
 
 " Built in Vim settings.
@@ -140,3 +142,13 @@ nnoremap <leader>gf :call GemSearch()<cr>
 " Default search colours in base16 are really bad:
 hi Search cterm=NONE ctermfg=black ctermbg=blue
 hi IncSearch cterm=NONE ctermfg=black ctermbg=red
+
+function! SynStack ()
+  for i1 in synstack(line("."), col("."))
+    let i2 = synIDtrans(i1)
+    let n1 = synIDattr(i1, "name")
+    let n2 = synIDattr(i2, "name")
+    echo n1 "->" n2
+  endfor
+endfunction
+nnoremap <leader>s :call SynStack()<CR>

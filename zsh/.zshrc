@@ -100,10 +100,3 @@ HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='bg=red,fg=white,bold'
 # Fuzzy Searching
 #################
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Base16 Colours
-################
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-  [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-  eval "$("$BASE16_SHELL/profile_helper.sh")"
