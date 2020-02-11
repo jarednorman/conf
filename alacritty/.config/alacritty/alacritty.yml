@@ -1,3 +1,6 @@
+mouse:
+  hide_when_typing: true
+
 window:
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: true
@@ -79,7 +82,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 13
+  size: 11.5
 
   # If the font quality on non-retina display looks bad then set
   # `use_thin_strokes` to `true` and enable font smoothing by running the
