@@ -25,9 +25,7 @@ Plug 'racer-rust/vim-racer'
 Plug 'rust-lang/rust.vim'
 Plug 'vim-ruby/vim-ruby'
 
-" One Day
-" Plug '~/Codes/vim-whitetail'
-Plug 'jarednorman/vim-detailed'
+Plug 'altercation/vim-colors-solarized'
 
 Plug 'w0rp/ale'
 
@@ -36,8 +34,8 @@ filetype plugin indent on
 
 " Make it pretty!
 syntax enable
-set t_Co=256
-colo detailed
+set background=light
+colo solarized
 
 " Built in Vim settings.
 set expandtab
