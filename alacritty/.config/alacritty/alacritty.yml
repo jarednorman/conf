@@ -14,7 +14,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background, but no title bar buttons
-  decorations: full
+  decorations: buttonless
 
   # Startup Mode (changes require restart)
   #
@@ -28,10 +28,15 @@ window:
 
   # You cannot set the startup_mode to "Maximized" and set the decorations to
   # "none" in Alacritty 0.4.0 due to a bug upstream in one of its dependencies.
-  startup_mode: Fullscreen
+  startup_mode: Maximized
 
   # Window title
   title: Alacritty
+
+  dynamic_padding: true
+  padding:
+    x: 6
+    y: 6
 
 # Font configuration
 font:
@@ -82,7 +87,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 12
+  size: 10
 
   # If the font quality on non-retina display looks bad then set
   # `use_thin_strokes` to `true` and enable font smoothing by running the
