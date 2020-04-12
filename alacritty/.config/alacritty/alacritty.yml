@@ -32,13 +32,13 @@ window:
 
   dynamic_padding: true
   padding:
-    x: 4
-    y: 4
+    x: 2
+    y: 2
 
 # Font configuration
 font:
   # Point size
-  size: 12
+  size: 12.5
 
   # Normal (roman) font face
   normal:

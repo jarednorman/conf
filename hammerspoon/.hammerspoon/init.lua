@@ -4,15 +4,18 @@ hs.hotkey.bind({"cmd", "alt", "shift"}, "M", function()
   local frame = hs.screen.mainScreen():frame()
   local barHeight = mode.h - frame.h
 
+  local width = 1006
+  local height = 900
+
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
-  local padding = (frame.h - 1048) / 2
+  local padding = (frame.h - height) / 2
 
   f.y = barHeight + padding
   f.x = padding
-  f.w = 1258
-  f.h = 1048
+  f.w = width
+  f.h = height
   win:setFrame(f)
 end)
 
