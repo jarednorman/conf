@@ -19,3 +19,18 @@ hs.hotkey.bind({"cmd", "alt", "shift"}, "M", function()
   win:setFrame(f)
 end)
 
+hs.hotkey.bind({"alt"}, "1", function()
+  hs.application.get("Firefox"):activate()
+end)
+
+hs.hotkey.bind({"alt"}, "2", function()
+  hs.application.get("Alacritty"):activate()
+end)
+
+hs.hotkey.bind({"alt"}, "3", function()
+  hs.application.get("Slack"):activate()
+end)
+
+hs.hotkey.bind({"alt"}, "4", function()
+  hs.application.get("Basecamp 3"):activate()
+end)
