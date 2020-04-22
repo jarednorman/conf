@@ -11,7 +11,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background, but no title bar buttons
-  decorations: buttonless
+  decorations: full
 
   # Startup Mode (changes require restart)
   #
@@ -32,8 +32,8 @@ window:
 
   dynamic_padding: true
   padding:
-    x: 6
-    y: 5
+    x: 0
+    y: 0
 
 # Font configuration
 font:
