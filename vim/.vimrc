@@ -37,6 +37,13 @@ syntax enable
 set background=light
 colo solarized
 
+" ALE
+let g:ale_sign_error = '--'
+let g:ale_sign_warning = '--'
+hi! ALEErrorSign ctermfg=15 ctermbg=1 cterm=bold
+hi! ALEWarningSign ctermfg=9 ctermbg=7 cterm=bold
+hi! SignColumn ctermbg=7
+
 " Built in Vim settings.
 set expandtab
 set fillchars+=vert:│
