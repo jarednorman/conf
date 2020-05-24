@@ -16,6 +16,30 @@ hs.hotkey.bind({"cmd", "alt", "shift"}, "M", function()
   f.x = padding
   f.w = width
   f.h = height
+
+  win:setFrame(f)
+end)
+
+-- This moves windows into my preferred screen position on my desktop.
+hs.hotkey.bind({"cmd", "alt", "shift"}, "P", function()
+  local mode = hs.screen.mainScreen():currentMode()
+  local frame = hs.screen.mainScreen():frame()
+  local barHeight = mode.h - frame.h
+
+  local xPadding = 202
+  local yPadding = 86
+
+  local width = frame.w - 2 * xPadding
+  local height = frame.h - 2 * yPadding
+
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+
+  f.y = barHeight + yPadding
+  f.x = xPadding
+  f.w = width
+  f.h = height
+
   win:setFrame(f)
 end)
 
