@@ -44,7 +44,7 @@ hs.hotkey.bind({"cmd", "alt", "shift"}, "P", function()
 end)
 
 hs.hotkey.bind({"alt"}, "1", function()
-  hs.application.get("Google Chrome"):activate()
+  hs.application.get("Firefox"):activate()
 end)
 
 hs.hotkey.bind({"alt"}, "2", function()
