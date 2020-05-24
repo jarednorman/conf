@@ -15,14 +15,15 @@ export PATH=":$PATH"
 # Path
 ######
 path=(
-  $path
-  /usr/local/{bin,sbin}
+  $HOME/.bin
   $DENO_INSTALL/bin
   $HOME/.fzf/bin
   $HOME/.cargo/bin
   $HOME/.config/yarn/global/node_modules/.bin
   $HOME/.fnm
-  $HOME/.bin
+  /snap/bin
+  /usr/local/{bin,sbin}
+  $path
 )
 
 # Functions
