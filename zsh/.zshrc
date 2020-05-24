@@ -7,16 +7,22 @@ SAVEHIST=1000000
 export KEYTIMEOUT=1
 bindkey -v
 
+# Deno
+######
+export DENO_INSTALL="/Users/jardo/.deno"
+export PATH=":$PATH"
+
 # Path
 ######
 path=(
-  $HOME/.bin
-  $HOME/.fzf/bin
+  $path
   /usr/local/{bin,sbin}
+  $DENO_INSTALL/bin
+  $HOME/.fzf/bin
   $HOME/.cargo/bin
   $HOME/.config/yarn/global/node_modules/.bin
   $HOME/.fnm
-  $path
+  $HOME/.bin
 )
 
 # Functions
