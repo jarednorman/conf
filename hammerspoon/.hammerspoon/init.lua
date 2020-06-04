@@ -20,29 +20,68 @@ hs.hotkey.bind({"cmd", "alt", "shift"}, "M", function()
   win:setFrame(f)
 end)
 
+XPADDING = 48
+YPADDING = XPADDING + 2
+
 -- This moves windows into my preferred screen position on my desktop.
-hs.hotkey.bind({"cmd", "alt", "shift"}, "P", function()
+hs.hotkey.bind({"cmd", "alt", "shift"}, "`", function()
   local mode = hs.screen.mainScreen():currentMode()
   local frame = hs.screen.mainScreen():frame()
   local barHeight = mode.h - frame.h
 
-  local xPadding = 202
-  local yPadding = 86
-
-  local width = frame.w - 2 * xPadding
-  local height = frame.h - 2 * yPadding
+  local width = frame.w - 2 * XPADDING
+  local height = frame.h - 2 * YPADDING
 
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
-  f.y = barHeight + yPadding
-  f.x = xPadding
+  f.y = barHeight + YPADDING
+  f.x = XPADDING
   f.w = width
   f.h = height
 
   win:setFrame(f)
 end)
 
+-- This moves windows into my preferred screen position on my desktop.
+hs.hotkey.bind({"cmd", "alt", "shift"}, "1", function()
+  local mode = hs.screen.mainScreen():currentMode()
+  local frame = hs.screen.mainScreen():frame()
+  local barHeight = mode.h - frame.h
+
+  local width = (frame.w - 3 * XPADDING) / 2
+  local height = frame.h - 2 * YPADDING
+
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+
+  f.y = barHeight + YPADDING
+  f.x = XPADDING
+  f.w = width
+  f.h = height
+
+  win:setFrame(f)
+end)
+
+-- This moves windows into my preferred screen position on my desktop.
+hs.hotkey.bind({"cmd", "alt", "shift"}, "2", function()
+  local mode = hs.screen.mainScreen():currentMode()
+  local frame = hs.screen.mainScreen():frame()
+  local barHeight = mode.h - frame.h
+
+  local width = (frame.w - 3 * XPADDING) / 2
+  local height = frame.h - 2 * YPADDING
+
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+
+  f.y = barHeight + YPADDING
+  f.x = XPADDING * 2 + width
+  f.w = width
+  f.h = height
+
+  win:setFrame(f)
+end)
 hs.hotkey.bind({"alt"}, "1", function()
   hs.application.get("Firefox"):activate()
 end)
