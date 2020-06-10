@@ -21,8 +21,8 @@ hs.hotkey.bind({"cmd", "alt", "shift"}, "M", function()
 end)
 
 TERMWIDTH = 960
-XPADDING = 32
-YPADDING = XPADDING - 0.5
+XPADDING = 26
+YPADDING = XPADDING
 
 -- This moves windows into my preferred screen position on my desktop.
 hs.hotkey.bind({"cmd", "alt", "shift"}, "`", function()

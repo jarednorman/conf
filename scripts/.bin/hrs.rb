@@ -11,11 +11,11 @@ class Breakdown
 
       puts "Schedule:"
       puts "#########"
-      puts "Start:\t#{current_hours}"
+      puts "Start:\t\t#{current_hours}"
 
       days.each do |day|
         current_hours = round(current_hours + hours_per_day)
-        puts "Day #{day}:\t#{current_hours}"
+        puts "Day\t#{day}\t#{current_hours}"
       end
     end
 
@@ -25,6 +25,6 @@ class Breakdown
   end
 end
 
-# Breakdown.(days: (9..25).to_a, current_hours: 1.3, target_hours: 49.0)
-# Breakdown.(days: (9..25).to_a, current_hours: 4.52, target_hours: 28.0)
-Breakdown.(days: (9..25).to_a, current_hours: 5.6, target_hours: 32.0)
+Breakdown.(days: (9..25).to_a, current_hours: 1.3, target_hours: 49.0)
+r# Breakdown.(days: (9..25).to_a, current_hours: 4.52, target_hours: 28.0)
+# Breakdown.(days: (9..25).to_a, current_hours: 5.6, target_hours: 32.0)
