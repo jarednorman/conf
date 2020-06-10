@@ -20,8 +20,9 @@ hs.hotkey.bind({"cmd", "alt", "shift"}, "M", function()
   win:setFrame(f)
 end)
 
-XPADDING = 48
-YPADDING = XPADDING + 2
+TERMWIDTH = 960
+XPADDING = 32
+YPADDING = XPADDING - 0.5
 
 -- This moves windows into my preferred screen position on my desktop.
 hs.hotkey.bind({"cmd", "alt", "shift"}, "`", function()
@@ -49,7 +50,7 @@ hs.hotkey.bind({"cmd", "alt", "shift"}, "1", function()
   local frame = hs.screen.mainScreen():frame()
   local barHeight = mode.h - frame.h
 
-  local width = (frame.w - 3 * XPADDING) / 2
+  local width = frame.w - 3 * XPADDING - TERMWIDTH
   local height = frame.h - 2 * YPADDING
 
   local win = hs.window.focusedWindow()
@@ -69,14 +70,14 @@ hs.hotkey.bind({"cmd", "alt", "shift"}, "2", function()
   local frame = hs.screen.mainScreen():frame()
   local barHeight = mode.h - frame.h
 
-  local width = (frame.w - 3 * XPADDING) / 2
+  local width = TERMWIDTH
   local height = frame.h - 2 * YPADDING
 
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
   f.y = barHeight + YPADDING
-  f.x = XPADDING * 2 + width
+  f.x = frame.w - XPADDING - width
   f.w = width
   f.h = height
 
@@ -87,7 +88,7 @@ hs.hotkey.bind({"alt"}, "1", function()
 end)
 
 hs.hotkey.bind({"alt"}, "2", function()
-  hs.application.get("Alacritty"):activate()
+  hs.application.get("iTerm2"):activate()
 end)
 
 hs.hotkey.bind({"alt"}, "3", function()

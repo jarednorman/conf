@@ -25,15 +25,15 @@ window:
 
   # You cannot set the startup_mode to "Maximized" and set the decorations to
   # "none" in Alacritty 0.4.0 due to a bug upstream in one of its dependencies.
-  startup_mode: Windowed
+  startup_mode: Maximized
 
   # Window title
   title: Alacritty
 
-  dynamic_padding: true
+  dynamic_padding: false
   padding:
-    x: 4
-    y: 4
+    x: 2
+    y: 2
 
 # Font configuration
 font:
@@ -90,7 +90,7 @@ font:
   # `use_thin_strokes` to `true` and enable font smoothing by running the
   # following command:
   #   `defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO`
-  use_thin_strokes: true
+  use_thin_strokes: false
 
 selection:
   save_to_clipboard: true
