@@ -38,7 +38,7 @@ window:
 # Font configuration
 font:
   # Point size
-  size: 14
+  size: 15
 
   # Normal (roman) font face
   normal:
