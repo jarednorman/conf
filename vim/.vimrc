@@ -26,7 +26,7 @@ Plug 'racer-rust/vim-racer'
 Plug 'rust-lang/rust.vim'
 Plug 'vim-ruby/vim-ruby'
 
-Plug 'altercation/vim-colors-solarized'
+Plug 'jeffkreeftmeijer/vim-dim'
 
 Plug 'w0rp/ale'
 
@@ -36,7 +36,7 @@ filetype plugin indent on
 " Make it pretty!
 syntax enable
 set background=light
-colo solarized
+colo dim
 
 " ALE
 let g:ale_sign_error = '--'
@@ -143,7 +143,7 @@ function! GemSearch()
 endfunction
 
 function! GemFileSearch(gem)
-  let gemdir = substitute(system("bundle show " . a:gem), '\n\+$', '', '')
+  let gemdir = substitute(system("bundle info --path " . a:gem), '\n\+$', '', '')
   call fzf#run(fzf#wrap({'source': 'rg --files ' . gemdir . ' --color never | sed -e "s#^' . gemdir . '/##"', 'dir': gemdir}))
 endfunction
 

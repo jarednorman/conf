@@ -67,3 +67,5 @@
   oldHighlight = red reverse
   newNormal = green
   newHighlight = green reverse
+[push]
+	default = current

@@ -68,20 +68,20 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' check-for-staged-changes true
-zstyle ':vcs_info:*' stagedstr '%F{2}*'
-zstyle ':vcs_info:*' unstagedstr '%F{1}*'
-zstyle ':vcs_info:git*' formats " %F{14}%b%u%c%m%{$reset_color%}"
+zstyle ':vcs_info:*' stagedstr '%F{10}*'
+zstyle ':vcs_info:*' unstagedstr '%F{9}*'
+zstyle ':vcs_info:git*' formats " %F{12}%b%u%c%m%{$reset_color%}"
 precmd() { vcs_info }
 
 setprompt() {
   setopt prompt_subst
 
   PS1=${(j::Q)${(Z:Cn:):-$'
-    %F{4}%~%f
+    %F{7}%~%f
     ${vcs_info_msg_0_}
-    %F{5}%(1j. %j.)%f
+    %F{14}%(1j. %j.)%f
     " "
-    %(?.%F{10}.%F{1})$%f
+    %(?.%F{2}.%F{1})$%f
     " "
   '}}
 }
