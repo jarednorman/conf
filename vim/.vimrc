@@ -39,10 +39,12 @@ set background=light
 colo dim
 
 " ALE
-let g:ale_sign_error = '--'
-let g:ale_sign_warning = '--'
-hi! ALEErrorSign ctermfg=15 ctermbg=1 cterm=bold
-hi! ALEWarningSign ctermfg=9 ctermbg=7 cterm=bold
+let g:ale_sign_error = '->'
+let g:ale_sign_warning = '->'
+hi! ALEError ctermfg=9 ctermbg=15 cterm=reverse,bold
+hi! ALEErrorSign ctermfg=15 ctermbg=9 cterm=bold
+hi! ALEWarning ctermfg=none ctermbg=none cterm=underline
+hi! ALEWarningSign ctermfg=15 ctermbg=1 cterm=none
 hi! SignColumn ctermbg=7
 
 " Built in Vim settings.
