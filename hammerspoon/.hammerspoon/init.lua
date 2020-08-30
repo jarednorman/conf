@@ -20,9 +20,8 @@ hs.hotkey.bind({"cmd", "alt", "shift"}, "M", function()
   win:setFrame(f)
 end)
 
-TERMWIDTH = 960
-XPADDING = 26
-YPADDING = XPADDING
+XPADDING = 31
+YPADDING = XPADDING - 1.5
 
 -- This moves windows into my preferred screen position on my desktop.
 hs.hotkey.bind({"cmd", "alt", "shift"}, "`", function()
@@ -44,57 +43,13 @@ hs.hotkey.bind({"cmd", "alt", "shift"}, "`", function()
   win:setFrame(f)
 end)
 
--- This moves windows into my preferred screen position on my desktop.
-hs.hotkey.bind({"cmd", "alt", "shift"}, "1", function()
-  local mode = hs.screen.mainScreen():currentMode()
-  local frame = hs.screen.mainScreen():frame()
-  local barHeight = mode.h - frame.h
+local hotkey = function(index, applicationName)
+  hs.hotkey.bind({"alt"}, index, function()
+    hs.application.get(applicationName):activate()
+  end)
+end
 
-  local width = frame.w - 3 * XPADDING - TERMWIDTH
-  local height = frame.h - 2 * YPADDING
-
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-
-  f.y = barHeight + YPADDING
-  f.x = XPADDING
-  f.w = width
-  f.h = height
-
-  win:setFrame(f)
-end)
-
--- This moves windows into my preferred screen position on my desktop.
-hs.hotkey.bind({"cmd", "alt", "shift"}, "2", function()
-  local mode = hs.screen.mainScreen():currentMode()
-  local frame = hs.screen.mainScreen():frame()
-  local barHeight = mode.h - frame.h
-
-  local width = TERMWIDTH
-  local height = frame.h - 2 * YPADDING
-
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-
-  f.y = barHeight + YPADDING
-  f.x = frame.w - XPADDING - width
-  f.w = width
-  f.h = height
-
-  win:setFrame(f)
-end)
-hs.hotkey.bind({"alt"}, "1", function()
-  hs.application.get("Firefox"):activate()
-end)
-
-hs.hotkey.bind({"alt"}, "2", function()
-  hs.application.get("iTerm2"):activate()
-end)
-
-hs.hotkey.bind({"alt"}, "3", function()
-  hs.application.get("Slack"):activate()
-end)
-
-hs.hotkey.bind({"alt"}, "4", function()
-  hs.application.get("Basecamp 3"):activate()
-end)
+hotkey("1", "Google Chrome")
+hotkey("2", "iTerm2")
+hotkey("3", "Slack")
+hotkey("4", "Basecamp 3")
