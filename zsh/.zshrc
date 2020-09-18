@@ -2,6 +2,8 @@ HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=1000000
 
+setopt hist_ignore_all_dups
+
 # Vim It
 ########
 export KEYTIMEOUT=1
