@@ -38,7 +38,7 @@ window:
 # Font configuration
 font:
   # Point size
-  size: 15
+  size: 14
 
   # Normal (roman) font face
   normal:
@@ -90,7 +90,7 @@ font:
   # `use_thin_strokes` to `true` and enable font smoothing by running the
   # following command:
   #   `defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO`
-  use_thin_strokes: false
+  use_thin_strokes: true
 
 selection:
   save_to_clipboard: true
