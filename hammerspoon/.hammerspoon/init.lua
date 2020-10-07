@@ -3,6 +3,7 @@ hs.hotkey.bind({"cmd", "alt", "shift"}, "`", function()
   local mode = hs.screen.mainScreen():currentMode()
   local frame = hs.screen.mainScreen():frame()
   local barHeight = mode.h - frame.h
+  local dockWidth = mode.w - frame.w
 
   local width = frame.w
   local height = frame.h
@@ -10,9 +11,11 @@ hs.hotkey.bind({"cmd", "alt", "shift"}, "`", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
+  local leftMargin = 4
+
   f.y = barHeight
-  f.x = 0
-  f.w = width
+  f.x = dockWidth + leftMargin
+  f.w = width - leftMargin
   f.h = height
 
   win:setFrame(f)
