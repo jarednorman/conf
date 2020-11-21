@@ -5,17 +5,18 @@ hs.hotkey.bind({"cmd", "alt", "shift"}, "`", function()
   local barHeight = mode.h - frame.h
   local dockWidth = mode.w - frame.w
 
-  local width = frame.w
-  local height = frame.h
+  local ratio = 0.969791667
+  local width = 122 * 8
+  local height = width * ratio + 1
 
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
-  local leftMargin = 0
+  local leftMargin = 100
 
   f.y = barHeight
-  f.x = dockWidth + leftMargin
-  f.w = width - leftMargin
+  f.x = leftMargin
+  f.w = width
   f.h = height
 
   win:setFrame(f)
