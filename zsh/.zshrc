@@ -6,7 +6,7 @@ setopt INC_APPEND_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_SAVE_NO_DUPS 
+setopt HIST_SAVE_NO_DUPS
 
 # Vim It
 ########
@@ -74,20 +74,20 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' check-for-staged-changes true
-zstyle ':vcs_info:*' stagedstr '%F{10}*'
-zstyle ':vcs_info:*' unstagedstr '%F{9}*'
-zstyle ':vcs_info:git*' formats " %F{12}%b%u%c%m%{$reset_color%}"
+zstyle ':vcs_info:*' stagedstr '%F{2}+'
+zstyle ':vcs_info:*' unstagedstr '%F{9}+'
+zstyle ':vcs_info:git*' formats " %F{13}%b%u%c%m%{$reset_color%}"
 precmd() { vcs_info }
 
 setprompt() {
   setopt prompt_subst
 
   PS1=${(j::Q)${(Z:Cn:):-$'
-    %F{7}%~%f
+    %F{6}%~%f
     ${vcs_info_msg_0_}
-    %F{14}%(1j. %j.)%f
+    %F{3}%(1j. %j.)%f
     " "
-    %(?.%F{2}.%F{1})$%f
+    %(?.%F{4o}.%F{1})$%f
     " "
   '}}
 }
