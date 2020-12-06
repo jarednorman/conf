@@ -25,6 +25,7 @@ path=(
   $DENO_INSTALL/bin
   $HOME/.fzf/bin
   $HOME/.cargo/bin
+  $HOME/.yarn/bin
   $HOME/.config/yarn/global/node_modules/.bin
   $HOME/.fnm
   /snap/bin
