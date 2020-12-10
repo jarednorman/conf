@@ -10,7 +10,7 @@
                 "parameters": {
                     "basic.simultaneous_threshold_milliseconds": 0,
                     "basic.to_delayed_action_delay_milliseconds": 0,
-                    "basic.to_if_alone_timeout_milliseconds": 200,
+                    "basic.to_if_alone_timeout_milliseconds": 100,
                     "basic.to_if_held_down_threshold_milliseconds": 0,
                     "mouse_motion_to_scroll.speed": 100
                 },
@@ -204,7 +204,7 @@
                         "key_code": "f4"
                     },
                     "to": {
-                        "key_code": "launchpad"
+                        "key_code": "illumination_decrement"
                     }
                 },
                 {
@@ -212,7 +212,7 @@
                         "key_code": "f5"
                     },
                     "to": {
-                        "key_code": "illumination_decrement"
+                        "key_code": "illumination_increment"
                     }
                 },
                 {
@@ -220,7 +220,7 @@
                         "key_code": "f6"
                     },
                     "to": {
-                        "key_code": "illumination_increment"
+                        "key_code": "vk_none"
                     }
                 },
                 {
