@@ -99,7 +99,7 @@ source $HOME/.zsh/vendor/chruby/chruby.sh
 source $HOME/.zsh/vendor/chruby/auto.sh
 
 # fnm
-eval "`fnm env --multi`"
+eval "`fnm env`"
 
 # History Substring Search
 ##########################
@@ -114,3 +114,4 @@ HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='bg=red,fg=white,bold'
 # Fuzzy Searching
 #################
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
