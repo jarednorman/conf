@@ -26,7 +26,7 @@ Plug 'racer-rust/vim-racer'
 Plug 'rust-lang/rust.vim'
 Plug 'vim-ruby/vim-ruby'
 
-Plug 'altercation/vim-colors-solarized'
+Plug 'jeffkreeftmeijer/vim-dim'
 
 Plug 'w0rp/ale'
 
@@ -35,8 +35,8 @@ filetype plugin indent on
 
 " Make it pretty!
 syntax enable
-set background=light
-colo solarized
+" set background=light
+colo dim
 
 " ALE
 let g:ale_sign_error = '->'
