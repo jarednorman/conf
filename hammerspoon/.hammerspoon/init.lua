@@ -6,13 +6,13 @@ hs.hotkey.bind({"cmd", "alt", "shift"}, "`", function()
   local dockWidth = mode.w - frame.w
 
   local ratio = 0.969791667
-  local width = 128 * 10 + 8
-  local height = 63 * 20 - 10
+  local width = 142 * 7 + 8
+  local height = 64 * 15 + 10
 
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
-  local leftMargin = 100
+  local leftMargin = 800
 
   f.y = barHeight
   f.x = leftMargin
