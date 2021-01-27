@@ -1,3 +1,5 @@
+hs.loadSpoon('ControlEscape'):start()
+
 -- This moves windows into my preferred screen position on my desktop.
 hs.hotkey.bind({"cmd", "alt", "shift"}, "`", function()
   local mode = hs.screen.mainScreen():currentMode()
@@ -28,7 +30,7 @@ local hotkey = function(index, applicationName)
   end)
 end
 
-hotkey("1", "Google Chrome")
-hotkey("2", "iTerm2")
-hotkey("3", "Slack")
-hotkey("4", "Basecamp 3")
+hotkey("1", "iTerm2")
+hotkey("2", "Safari")
+hotkey("3", "Firefox Developer Edition")
+hotkey("4", "Slack")
