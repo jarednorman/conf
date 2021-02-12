@@ -20,6 +20,7 @@
   user = jarednorman
 [alias]
   a = add
+  ap = add -p
   b = branch
   bl = branch --sort=-committerdate -vv
   c = commit -v
