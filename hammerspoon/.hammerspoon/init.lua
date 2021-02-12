@@ -31,6 +31,6 @@ local hotkey = function(index, applicationName)
 end
 
 hotkey("1", "iTerm2")
-hotkey("2", "Safari")
+hotkey("2", "Notion")
 hotkey("3", "Firefox Developer Edition")
 hotkey("4", "Slack")
