@@ -30,6 +30,7 @@
   co = checkout
   cb = checkout -b
   d = diff
+  di = diff --no-index
   ds = diff --staged
   f = fetch
   ff = merge --ff-only
