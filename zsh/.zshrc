@@ -78,16 +78,16 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' check-for-staged-changes true
 zstyle ':vcs_info:*' stagedstr '%F{2}+'
 zstyle ':vcs_info:*' unstagedstr '%F{1}+'
-zstyle ':vcs_info:git*' formats " %F{10}%b%u%c%m%{$reset_color%}"
+zstyle ':vcs_info:git*' formats " %F{4}%b%u%c%m%{$reset_color%}"
 precmd() { vcs_info }
 
 setprompt() {
   setopt prompt_subst
 
   PS1=${(j::Q)${(Z:Cn:):-$'
-    %F{14}%~%f
+    %F{7}%~%f
     ${vcs_info_msg_0_}
-    %F{13}%(1j. %j.)%f
+    %F{3}%(1j. %j.)%f
     " "
     %(?.%F{2}.%F{1})$%f
     " "

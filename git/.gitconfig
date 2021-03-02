@@ -34,7 +34,7 @@
   ds = diff --staged
   f = fetch
   ff = merge --ff-only
-  ll = log --graph --pretty=format:'%C(14)%h %C(reset)%C(2)→ %C(10)%s%C(reset) %C(4)%aN %C(12)%cd%C(5)%d' --abbrev-commit
+  ll = log --graph --pretty=format:'%C(6)%h %C(reset)%C(4)→ %C(reset)%s %C(2)%aN %C(8)%cd%C(3)%d' --abbrev-commit
   l = ll --date=relative
   m = merge
   pf = push --force-with-lease
