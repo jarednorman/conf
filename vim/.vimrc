@@ -26,17 +26,26 @@ Plug 'racer-rust/vim-racer'
 Plug 'rust-lang/rust.vim'
 Plug 'vim-ruby/vim-ruby'
 
-Plug 'jeffkreeftmeijer/vim-dim'
+Plug 'morhetz/gruvbox'
 
 Plug 'w0rp/ale'
 
 call plug#end()
 filetype plugin indent on
 
-" Make it pretty!
 syntax enable
-set t_Co=256
-colo dim
+
+" Enable True Color
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+set termguicolors
+
+" Make it pretty
+set background=dark
+colo gruvbox
 
 " ALE
 let g:ale_sign_error = '->'
