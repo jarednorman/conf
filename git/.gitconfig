@@ -34,7 +34,7 @@
   ds = diff --staged
   f = fetch
   ff = merge --ff-only
-  ll = log --graph --pretty=format:'%C(6)%h %C(reset)%C(4)→ %C(reset)%s %C(2)%aN %C(8)%cd%C(3)%d' --abbrev-commit
+  ll = log --graph --pretty=format:'%C(6)%h %C(reset)%C(8)→ %C(bold)%C(7)%s%C(reset) %C(4)%aN %C(8)%cd%C(11)%d' --abbrev-commit
   l = ll --date=relative
   m = merge
   pf = push --force-with-lease
@@ -53,21 +53,22 @@
   ui = true
 [color "branch"]
   current = yellow reverse
-  local = yellow
-  remote = green
+  local = green
+  remote = green bold
 [color "diff"]
-  meta = magenta bold
-  frag = blue
+  meta = yellow
+  frag = 8
   old = red
   new = green
   commit = cyan
   whitespace = red reverse
-[color "status"]
-  header = magenta bold
+  func = black bold
 [color "diff-highlight"]
-  oldNormal = red
-  oldHighlight = red reverse
-  newNormal = green
-  newHighlight = green reverse
+  oldNormal = 9
+  oldHighlight = 9 ul
+  newNormal = 10
+  newHighlight = 10 ul
+[color "status"]
+  header = blue
 [push]
   default = current
