@@ -59,7 +59,6 @@ hi! SignColumn ctermbg=7
 " Built in Vim settings.
 set expandtab
 set fillchars+=vert:│
-set fillchars+=vert:\¦
 set grepprg=rg\ --vimgrep
 set hlsearch
 set ignorecase
