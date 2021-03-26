@@ -67,7 +67,7 @@ set list listchars=tab:→\ ,trail:\ "
 set nobackup
 set noerrorbells visualbell t_vb=
 set noswapfile
-set nonumber
+set number
 set scrolljump=15
 set shell=$SHELL
 set shiftwidth=2
