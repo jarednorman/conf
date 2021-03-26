@@ -11,23 +11,20 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 
-Plug 'mileszs/ack.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
-Plug 'embear/vim-uncrustify'
 Plug 'jason0x43/vim-js-indent'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
+Plug 'mileszs/ack.vim'
+Plug 'morhetz/gruvbox'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'racer-rust/vim-racer'
 Plug 'rust-lang/rust.vim'
+Plug 'vim-airline/vim-airline'
 Plug 'vim-ruby/vim-ruby'
-
-Plug 'morhetz/gruvbox'
-
 Plug 'w0rp/ale'
 
 call plug#end()
@@ -47,14 +44,12 @@ set termguicolors
 set background=dark
 colo gruvbox
 
+hi Search guibg=#fabd2f guifg=#1d2021
+hi IncSearch guibg=#fe8019 guifg=#1d2021
+
 " ALE
 let g:ale_sign_error = '->'
 let g:ale_sign_warning = '->'
-hi! ALEError ctermfg=9 ctermbg=15 cterm=reverse,bold
-hi! ALEErrorSign ctermfg=15 ctermbg=9 cterm=bold
-hi! ALEWarning ctermfg=none ctermbg=none cterm=underline
-hi! ALEWarningSign ctermfg=15 ctermbg=1 cterm=none
-hi! SignColumn ctermbg=7
 
 " Built in Vim settings.
 set expandtab
