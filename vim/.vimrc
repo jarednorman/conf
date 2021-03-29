@@ -51,6 +51,15 @@ hi IncSearch guibg=#fe8019 guifg=#1d2021
 let g:ale_sign_error = '->'
 let g:ale_sign_warning = '->'
 
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_splits = 0
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_tabs = 0
+let g:airline#extensions#tabline#show_tab_count = 0
+let g:airline#extensions#tabline#show_tab_nr = 0
+let g:airline#extensions#tabline#show_tab_type = 0
+
 " Built in Vim settings.
 set expandtab
 set fillchars+=vert:│
