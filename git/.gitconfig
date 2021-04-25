@@ -1,23 +1,3 @@
-[init]
-[core]
-  editor = vim
-  excludesfile = ~/.gitignore.global
-  pager = diff-so-fancy | less --tabs=4 -RFX
-[credential]
-  helper = cache --timeout=3600
-[merge]
-  tool = splice
-  conflictstyle = diff3
-[mergetool]
-  keepBackup = false
-[mergetool "splice"]
-  cmd = "vim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
-  trustExitCode = true
-[user]
-  name = Jared Norman
-  email = jared@super.gd
-[github]
-  user = jarednorman
 [alias]
   a = add
   ap = add -p
@@ -25,17 +5,17 @@
   bl = branch --sort=-committerdate -vv
   c = commit -v
   ca = commit -v --amend
+  cb = checkout -b
   cf = commit --fixup
   cn = commit -v --no-verify
   co = checkout
-  cb = checkout -b
   d = diff
-  di = diff --no-index
+  dni = diff --no-index
   ds = diff --staged
   f = fetch
   ff = merge --ff-only
-  ll = log --graph --pretty=format:'%C(6)%h %C(reset)%C(8)→ %C(bold)%C(7)%s%C(reset) %C(4)%aN %C(8)%cd%C(11)%d' --abbrev-commit
   l = ll --date=relative
+  ll = log --graph --pretty=format:'%C("#7c6f64")%h %C(reset)%C("#bdae93")→ %C("#3c3836")%s%C(reset) %C("#076678")%aN %C("#a89984")%cd%C("#8f3f71")%d' --abbrev-commit
   m = merge
   pf = push --force-with-lease
   r = rebase
@@ -44,31 +24,56 @@
   ri = rebase -i
   s = status
   ss = status -s
-[rebase]
-  autosquash = true
 [color]
   branch = auto
   diff = auto
   status = auto
   ui = true
 [color "branch"]
-  current = yellow reverse
-  local = green
-  remote = green bold
+  current = "#076678 bold"
+  local = "#076678"
+  plain = "#ff00ff"
+  remote = "#8f3f71"
+  upstream = "#8f3f71"
 [color "diff"]
-  meta = yellow
-  frag = 8
-  old = red
-  new = green
-  commit = cyan
-  whitespace = red reverse
-  func = black bold
+  commit = "#ff00ff"
+  context = "#ff00ff"
+  frag = "#3c3836 #ebdbb2 bold"
+  func = "#3c3836 nobold"
+  meta = "#427b58"
+  new = "#79740e"
+  old = "#9d0006"
+  plain = "#7c6f64"
+  whitespace = "#af3a0e reverse"
 [color "diff-highlight"]
-  oldNormal = 9
-  oldHighlight = 9 ul
-  newNormal = 10
-  newHighlight = 10 ul
+  newHighlight = "#79740e bold ul"
+  newNormal = "#79740e"
+  oldHighlight = "#9d0006 bold ul"
+  oldNormal = "#9d0006"
 [color "status"]
-  header = blue
+  added = "#79740e"
+  branch = "#af3a03 bold"
+  changed = "#9d0006"
+  header = "#076678"
+  nobranch = "#d6540e"
+  unmerged = "#d65d0e bold"
+  untracked = "#7c6f64"
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore.global
+  pager = diff-so-fancy | less --tabs=4 -RFX
+[credential]
+  helper = cache --timeout=3600
+[github]
+  user = jarednorman
+[init]
+  defaultBranch = main
+[merge]
+  conflictstyle = diff3
 [push]
   default = current
+[rebase]
+  autosquash = true
+[user]
+  name = Jared Norman
+  email = jared@super.gd
