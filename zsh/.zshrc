@@ -7,25 +7,19 @@ setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_SAVE_NO_DUPS
-setopt HISTIGNORESPACE
+setopt HIST_IGNORE_SPACE
+unsetopt AUTO_REMOVE_SLASH
 
 # Vim It
 ########
 export KEYTIMEOUT=1
 bindkey -v
 
-# Deno
-######
-export DENO_INSTALL="/Users/jardo/.deno"
-export PATH=":$PATH"
-
 # Path
 ######
 path=(
   $HOME/.bin
-  $DENO_INSTALL/bin
   $HOME/.fzf/bin
-  $HOME/.cargo/bin
   $HOME/.yarn/bin
   $HOME/.config/yarn/global/node_modules/.bin
   $HOME/.fnm
