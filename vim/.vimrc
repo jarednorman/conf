@@ -47,8 +47,9 @@ set termguicolors
 set background=light
 colo gruvbox
 
-hi Search guibg=#fabd2f guifg=#1d2021
-hi IncSearch guibg=#fe8019 guifg=#1d2021
+hi Search cterm=none guifg=#3c3836 guibg=#ebdbb2
+hi IncSearch cterm=none guifg=#fbf1c7 guibg=#3c3836
+hi Visual cterm=none guifg=#fbf1c7 guibg=#458588
 
 " ALE
 let g:ale_sign_error = '->'
@@ -61,11 +62,11 @@ set grepprg=rg\ --vimgrep
 set hlsearch
 set ignorecase
 set lazyredraw
-set list listchars=tab:→\ ,trail:\ "
+set list listchars=tab:→\ ,trail:\•"
 set nobackup
 set noerrorbells visualbell t_vb=
+set nonumber
 set noswapfile
-set number
 set scrolljump=15
 set shell=$SHELL
 set shiftwidth=2
@@ -78,9 +79,6 @@ set timeoutlen=1000 ttimeoutlen=0
 set ttyfast
 set wildmode=list:longest,list:full
 set wrap
-
-" Uncrustify
-autocmd BufWritePre *.c call Uncrustify()
 
 " ALE, chill out
 let g:ale_linters = {'ruby': ['standardrb']}
@@ -129,10 +127,9 @@ nnoremap <leader><leader> :FZF<cr>
 " Use Ale to x-plain what's under the cursor.
 nnoremap <leader>x :ALEHover<cr>
 
-" Test running! I promise I'll do something more sensible at some point.
-nnoremap <leader>t :!clear; bundle exec rspec %<cr>
-nnoremap <leader>r :!clear; bundle exec ./%<cr>
-nnoremap <leader>f :!clear; bundle exec standardrb %<cr>
+" Dispatch
+nnoremap <leader>d :Dispatch<cr>
+nnoremap <leader>f :Dispatch bundle exec standardrb --fix %<cr>
 
 " Gem search
 function! GemSearch()
@@ -145,10 +142,6 @@ function! GemFileSearch(gem)
 endfunction
 
 nnoremap <leader>gf :call GemSearch()<cr>
-
-" Default search colours in base16 are really bad:
-hi Search cterm=NONE ctermfg=black ctermbg=blue
-hi IncSearch cterm=NONE ctermfg=black ctermbg=red
 
 function! SynStack ()
   for i1 in synstack(line("."), col("."))
