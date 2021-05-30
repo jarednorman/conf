@@ -6,11 +6,14 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-haml'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'jason0x43/vim-js-indent'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'kchmck/vim-coffee-script'
@@ -50,15 +53,6 @@ hi IncSearch guibg=#fe8019 guifg=#1d2021
 " ALE
 let g:ale_sign_error = '->'
 let g:ale_sign_warning = '->'
-
-" Airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_splits = 0
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#show_tabs = 1
-let g:airline#extensions#tabline#show_tab_count = 0
-let g:airline#extensions#tabline#show_tab_nr = 0
-let g:airline#extensions#tabline#show_tab_type = 0
 
 " Built in Vim settings.
 set expandtab
@@ -126,16 +120,6 @@ vnoremap K \<noop>
 nnoremap <c-w>o \<noop>
 vnoremap <c-w>o \<noop>
 
-" Pane navigation
-nnoremap <leader>h <C-w>h
-nnoremap <leader>j <C-w>j
-nnoremap <leader>k <C-w>k
-nnoremap <leader>l <C-w>l
-
-" Tab navigation
-nnoremap <leader><tab> :tabn<cr>
-nnoremap <leader><s-tab> :tabp<cr>
-
 " Clear search.
 nnoremap <leader>/ :let @/=""<cr>
 
@@ -147,8 +131,6 @@ nnoremap <leader>x :ALEHover<cr>
 
 " Test running! I promise I'll do something more sensible at some point.
 nnoremap <leader>t :!clear; bundle exec rspec %<cr>
-
-" Ruby
 nnoremap <leader>r :!clear; bundle exec ./%<cr>
 nnoremap <leader>f :!clear; bundle exec standardrb %<cr>
 
