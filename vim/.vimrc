@@ -47,6 +47,10 @@ hi Search cterm=none guifg=#3c3836 guibg=#ebdbb2
 hi IncSearch cterm=none guifg=#fbf1c7 guibg=#3c3836
 hi Visual cterm=none guifg=#fbf1c7 guibg=#458588
 
+" Highlight text over 100 chars wide
+hi OverLength guibg=NONE guifg=#af3a03
+match OverLength /\%101v.*/
+
 " ALE
 let g:ale_sign_error = '->'
 let g:ale_sign_warning = '->'
