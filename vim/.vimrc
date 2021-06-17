@@ -43,9 +43,9 @@ set termguicolors
 set background=light
 colo gruvbox
 
-hi Search cterm=none guifg=#3c3836 guibg=#ebdbb2
-hi IncSearch cterm=none guifg=#fbf1c7 guibg=#3c3836
-hi Visual cterm=none guifg=#fbf1c7 guibg=#458588
+hi Search gui=none guifg=#3c3836 guibg=#ebdbb2
+hi IncSearch gui=none guifg=#fbf1c7 guibg=#3c3836
+hi Visual gui=none guifg=#fbf1c7 guibg=#458588
 
 " Highlight text over 100 chars wide
 hi OverLength guibg=NONE guifg=#af3a03
