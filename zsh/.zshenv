@@ -15,8 +15,8 @@ if [[ -f /opt/homebrew/bin/brew ]]; then
 fi
 
 # We do vim around here.
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 export PAGER='less'
 
 # FZF configuration.
