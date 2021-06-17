@@ -304,6 +304,9 @@ defaults write com.apple.dock autohide-delay -float 0
 # Remove the animation when hiding/showing the Dock
 defaults write com.apple.dock autohide-time-modifier -float 0
 
+# Automatically hide and show the menu bar
+defaults write NSGlobalDomain _HIHideMenuBar -bool true
+
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
