@@ -11,25 +11,10 @@ setopt HIST_IGNORE_SPACE
 unsetopt AUTO_REMOVE_SLASH
 
 # Vim It
-########
 export KEYTIMEOUT=1
 bindkey -v
 
-# Path
-######
-path=(
-  $HOME/.bin
-  $HOME/.fzf/bin
-  $HOME/.yarn/bin
-  $HOME/.config/yarn/global/node_modules/.bin
-  $HOME/.fnm
-  /snap/bin
-  /usr/local/{bin,sbin}
-  $path
-)
-
 # Functions
-###########
 function current_branch() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || \
   ref=$(git rev-parse --short HEAD 2> /dev/null) || return
@@ -45,7 +30,6 @@ function open-gem() {
 function f() { ag --nocolor -l -g "$1" "${2:-.}"  }
 
 # Aliases
-#########
 alias bx="bundle exec"
 alias c='cd ~/Codes/$(ls ~/Codes | fzf)'
 alias cpriv='cd ~/Codes/private/$(ls ~/Codes/private | fzf)'
@@ -53,10 +37,10 @@ alias dev='ssh -t `grep -w -i "Host" ~/.ssh/config | sed 's/Host//' | grep -i "\
 alias g=git
 alias ls="ls -G"
 alias myip="ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'"
+alias vim=nvim
 alias tms="tmux attach-session -t"
 
 # Completion Stuff
-##################
 zmodload zsh/complist 
 autoload -Uz compinit
 compinit
@@ -90,16 +74,7 @@ setprompt() {
 }
 setprompt
 
-# Chruby
-########
-source $HOME/.zsh/vendor/chruby/chruby.sh
-source $HOME/.zsh/vendor/chruby/auto.sh
-
-# fnm
-eval "`fnm env`"
-
 # History Substring Search
-##########################
 source $HOME/.zsh/vendor/zsh-history-substring-search.zsh
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
@@ -109,6 +84,4 @@ HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='bg=#fbf1c7,fg=#d65d0e,bold'
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='bg=#fbf1c7,fg=#9d0006,bold'
 
 # Fuzzy Searching
-#################
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
