@@ -1,3 +1,3 @@
 #!/bin/sh
 set -ex
-stow beets git karabiner hammerspoon misc ruby scripts tmux vim zsh -t ~
+stow beets git hammerspoon misc ruby scripts tmux vim zsh -t ~
