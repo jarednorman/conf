@@ -37,8 +37,8 @@ function current_branch() {
 }
 
 function open-gem() {
-  GEM=$(bundle list | cut -f 4 -d' ' | fzf)
-  DESTINATION=$(bundle show $GEM)
+  GEM=$(bundle list --no-color --name-only | fzf)
+  DESTINATION=$(bundle info --path $GEM)
   tmux new-window -c $DESTINATION -n $GEM
 }
 
