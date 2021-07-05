@@ -40,12 +40,12 @@ endif
 set termguicolors
 
 " Make it pretty
-set background=light
+set background=dark
 colo gruvbox
 
-hi Search cterm=none gui=none guifg=#3c3836 guibg=#ebdbb2
-hi IncSearch cterm=none gui=none guifg=#fbf1c7 guibg=#3c3836
-hi Visual cterm=none gui=none guifg=#fbf1c7 guibg=#458588
+hi Search cterm=bold gui=bold guifg=#fe8019 guibg=#3c3836
+hi IncSearch cterm=bold gui=bold guifg=#282828 guibg=#fe8019
+hi Visual cterm=bold gui=bold guifg=#282828 guibg=#fabd2f
 
 " Highlight text over 100 chars wide
 hi OverLength guibg=NONE guifg=#af3a03
