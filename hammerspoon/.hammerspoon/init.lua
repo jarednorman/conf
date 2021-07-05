@@ -30,7 +30,8 @@ local hotkey = function(index, applicationName)
   end)
 end
 
-hotkey("1", "iTerm2")
-hotkey("2", "Notion")
-hotkey("3", "Firefox Developer Edition")
+hotkey("1", "Firefox Developer Edition")
+hotkey("2", "iTerm2")
+hotkey("3", "Notion")
 hotkey("4", "Slack")
+hotkey("5", "Linear")
