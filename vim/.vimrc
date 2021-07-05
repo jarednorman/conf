@@ -131,6 +131,12 @@ nnoremap <leader>x :ALEHover<cr>
 nnoremap <leader>d :Dispatch<cr>
 nnoremap <leader>f :Dispatch bundle exec standardrb --fix %<cr>
 
+" Gist
+command -range=% Gist <line1>,<line2>call GistSync()
+function! GistSync() range
+  echo system('gh gist create -f '.shellescape(expand('%:t')), join(getline(a:firstline, a:lastline), "\n"))
+endfunction
+
 " Gem search
 function! GemSearch()
   call fzf#run(fzf#wrap({'source': "bundle list | sed '1d;$d' | cut -d ' ' -f 4", 'sink': {gem -> GemFileSearch(gem)}}))
