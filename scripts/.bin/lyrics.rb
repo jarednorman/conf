@@ -20,11 +20,38 @@ STATUSES = [
   "Oceans arise at my command",
   "I've nothing without sacrifice",
   "Fear not your anger",
-  "Open wide, embrace the afterlife"
+  "Open wide, embrace the afterlife",
+  "I am the master of the Nothing",
+  "Vast is the void in us",
+  "Look upon the shores of retribution",
+  "Immortal blood courses through my veins",
+  "The mammoth rider comes",
+  "The gods have left me on my own",
+  "How heavy this axe",
+  "All you know shall cease to be",
+  "We do what must be done",
+  "All will fall and Earth will die in flame",
+  "May the winter's wolves surround you",
+  "May the mountains rise against you",
+  "May the forests block your path",
+  "May your axes chip and shatter",
+  "Await your doom at empire's end",
+  "Laboring in the liquid light of Leviathan",
+  "You will not find us among those who dream of escaping",
+  "We ride the warp of space into the womb of night",
+  "The bearer of the orb awaits the sacred key",
+  "The cord is cut, the way is shut, the orb goes dim",
+  "This great nothing is everything",
+  "Descend into the voidpit",
+  "We are vast unknowable beings",
+  "Behind the mask, another mask",
+  "We bring ruins to ruins",
+  "Raze the grey throne of deep-rooted self annihilation",
+  "Assume the God form, seize the hidden shape",
+  "We all are bent by unseen burdens",
 ]
 
-now = Time.now
-
-Random.srand now.yday
-
-puts STATUSES.shuffle[now.hour % STATUSES.length]
+Time.now.tap do |now|
+  Random.srand now.yday
+  puts STATUSES.shuffle[now.hour % STATUSES.length]
+end
