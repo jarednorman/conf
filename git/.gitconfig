@@ -1,29 +1,6 @@
 [alias]
-  a = add
-  ap = add -p
-  b = branch
-  bl = branch --sort=-committerdate -vv
-  c = commit -v
-  ca = commit -v --amend
-  cb = checkout -b
-  cf = commit --fixup
-  cn = commit -v --no-verify
-  co = checkout
-  d = diff
-  dni = diff --no-index
-  ds = diff --staged
-  f = fetch
-  ff = merge --ff-only
   l = ll --date=relative
   ll = log --graph --pretty=format:'%C("#7c6f64")%h %C(reset)%C("#665c54")→ %C("#ebdbb2")%s%C(reset) %C("#458588")%aN %C("#928374")%cd%C("#fabd2f")%d' --abbrev-commit
-  m = merge
-  pf = push --force-with-lease
-  r = rebase
-  ra = rebase --abort
-  rc = rebase --continue
-  ri = rebase -i
-  s = status
-  ss = status -s
 [color]
   branch = auto
   diff = auto
@@ -57,6 +34,8 @@
   nobranch = "#ff00ff"
   unmerged = "#fe8019 bold"
   untracked = "#ebdbb2 bold"
+[commit]
+  verbose = true
 [core]
   editor = vim
   excludesfile = ~/.gitignore.global
