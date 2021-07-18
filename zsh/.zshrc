@@ -34,7 +34,6 @@ alias bx="bundle exec"
 alias c='cd ~/Codes/$(ls ~/Codes | fzf)'
 alias cpriv='cd ~/Codes/private/$(ls ~/Codes/private | fzf)'
 alias dev='ssh -t `grep -w -i "Host" ~/.ssh/config | sed 's/Host//' | grep -i "\-dev$" | fzf`'
-alias g=git
 alias ls="ls -G"
 alias myip="ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'"
 alias tms="tmux attach-session -t"

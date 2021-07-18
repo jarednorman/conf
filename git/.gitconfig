@@ -1,6 +1,3 @@
-[alias]
-  l = ll --date=relative
-  ll = log --graph --pretty=format:'%C("#7c6f64")%h %C(reset)%C("#665c54")→ %C("#ebdbb2")%s%C(reset) %C("#458588")%aN %C("#928374")%cd%C("#fabd2f")%d' --abbrev-commit
 [color]
   branch = auto
   diff = auto
@@ -42,10 +39,14 @@
   pager = diff-so-fancy | less --tabs=4 -RFX
 [credential]
   helper = cache --timeout=3600
+[format]
+  pretty = %C("#7c6f64")%h %C(reset)%C("#665c54")→ %C("#ebdbb2")%s%C(reset) %C("#458588")%aN %C("#928374")%cd%C("#fabd2f")%d
 [github]
   user = jarednorman
 [init]
   defaultBranch = main
+[log]
+  date = relative
 [merge]
   conflictstyle = diff3
 [push]
