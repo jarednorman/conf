@@ -4,33 +4,34 @@
   status = auto
   ui = true
 [color "branch"]
-  current = "#fabd2f bold"
-  local = "#a89984"
-  plain = "#a89984"
-  remote = "#a89984"
-  upstream = "#a89984"
+  current = "#076678 bold"
+  local = "#076678"
+  plain = "#ff00ff"
+  remote = "#8f3f71"
+  upstream = "#8f3f71"
 [color "diff"]
-  commit = "#a89984"
-  frag = "#ebdbb2 bold"
-  func = "#ebdbb2 nobold"
-  meta = "#fabd2f bold"
-  new = "#b8bb26"
-  old = "#fb4934"
-  plain = "#a89984"
-  whitespace = "#fe8019 reverse"
+  commit = "#ff00ff"
+  context = "#ff00ff"
+  frag = "#3c3836 #ebdbb2 bold"
+  func = "#3c3836 nobold"
+  meta = "#427b58"
+  new = "#79740e"
+  old = "#9d0006"
+  plain = "#7c6f64"
+  whitespace = "#af3a0e reverse"
 [color "diff-highlight"]
-  newHighlight = "#b8bb26 bold ul"
-  newNormal = "#b8bb26"
-  oldHighlight = "#fb4934 bold ul"
-  oldNormal = "#fb4934"
+  newHighlight = "#79740e bold ul"
+  newNormal = "#79740e"
+  oldHighlight = "#9d0006 bold ul"
+  oldNormal = "#9d0006"
 [color "status"]
-  added = "#b8bb26 bold"
-  branch = "#fabd2f bold"
-  changed = "#fb4934 bold"
-  header = "#a89984"
-  nobranch = "#ff00ff"
-  unmerged = "#fe8019 bold"
-  untracked = "#ebdbb2 bold"
+  added = "#79740e"
+  branch = "#af3a03 bold"
+  changed = "#9d0006"
+  header = "#076678"
+  nobranch = "#d6540e"
+  unmerged = "#d65d0e bold"
+  untracked = "#7c6f64"
 [commit]
   verbose = true
 [core]
@@ -40,7 +41,7 @@
 [credential]
   helper = cache --timeout=3600
 [format]
-  pretty = %C("#7c6f64")%h %C(reset)%C("#665c54")→ %C("#ebdbb2")%s%C(reset) %C("#458588")%aN %C("#928374")%cd%C("#fabd2f")%d
+  pretty = %C("#7c6f64")%h %C(reset)%C("#bdae93")→ %C("#3c3836")%s%C(reset) %C("#076678")%aN %C("#a89984")%cd%C("#8f3f71")%d
 [github]
   user = jarednorman
 [init]

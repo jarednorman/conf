@@ -56,21 +56,21 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' check-for-staged-changes true
-zstyle ':vcs_info:*' stagedstr '%F{#b8bb26}•'
-zstyle ':vcs_info:*' unstagedstr '%F{#fb4934}•'
-zstyle ':vcs_info:git*' formats " %F{#b16287}[%F{#d3869b}%b%u%c%m%F{#b16287}]%{$reset_color%}"
+zstyle ':vcs_info:*' stagedstr '%F{#98971a}•'
+zstyle ':vcs_info:*' unstagedstr '%F{#cc241d}•'
+zstyle ':vcs_info:git*' formats " %F{#b16287}[%F{#8f3f71}%b%u%c%m%F{#b16287}]%{$reset_color%}"
 precmd() { vcs_info }
 
 setprompt() {
   setopt prompt_subst
 
   PS1=${(j::Q)${(Z:Cn:):-$'
-    %F{#a89984} %~ %f
+    %F{#7c6f64} %~ %f
     ${vcs_info_msg_0_}
-    %(1j. %F{#689d6a}(%F{#8ec07c}%j%F{#689d6a}).)%f
-    %(?.. %F{#d65d0e}{%F{#fe8019}%?%F{#d65d0e}})
+    %(1j. %F{#689d6a}(%F{#427b58}%j%F{#689d6a}).)%f
+    %(?.. %F{#d65d0e}{%F{#af3a03}%?%F{#d65d0e}})
     "\n"
-    %(?.%F{#b8bb26}.%F{#fe8019})$%f
+    %(?.%F{#076678}.%F{#af3a03})$%f
     " "
   '}}
 }
@@ -82,8 +82,8 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
-HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='bg=#3c3836,fg=#b8bb26,bold'
-HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='bg=#3c3836,fg=#fe8019,bold'
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='bg=#fbf1c7,fg=#d65d0e,bold'
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='bg=#fbf1c7,fg=#9d0006,bold'
 
 # Fuzzy Searching
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
