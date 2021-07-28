@@ -51,9 +51,18 @@ hi Visual cterm=none gui=none guifg=#fbf1c7 guibg=#458588
 hi OverLength guibg=NONE guifg=#af3a03
 match OverLength /\%101v.*/
 
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_splits = 0
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_tabs = 0
+let g:airline#extensions#tabline#show_tab_count = 0
+let g:airline#extensions#tabline#show_tab_nr = 0
+let g:airline#extensions#tabline#show_tab_type = 0
+
 " ALE
-let g:ale_sign_error = '->'
-let g:ale_sign_warning = '->'
+let g:ale_sign_error = '→→'
+let g:ale_sign_warning = ' →'
 
 " Built in Vim settings.
 set expandtab
