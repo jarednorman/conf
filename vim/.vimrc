@@ -14,6 +14,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'jeffkreeftmeijer/vim-dim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
@@ -22,6 +23,7 @@ Plug 'morhetz/gruvbox'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'peitalin/vim-jsx-typescript'
+Plug 'rking/vim-detailed'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-ruby/vim-ruby'
 Plug 'w0rp/ale'
@@ -169,3 +171,5 @@ function! SynStack ()
   endfor
 endfunction
 nnoremap <leader>s :call SynStack()<CR>
+
+command Coauthor call fzf#run(fzf#wrap({'sink': { line -> execute('normal! oCo-Authored-By: ' .. line) }, 'source': 'cat ~/.coauthors'}))
