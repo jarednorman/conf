@@ -18,6 +18,7 @@ STATUSES = [
   "Only victory can bring me home",
   "I am the wind that shapes the land",
   "Oceans arise at my command",
+  "Politicians lives are like the tide",
   "I've nothing without sacrifice",
   "Fear not your anger",
   "Open wide, embrace the afterlife",
