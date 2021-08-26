@@ -29,11 +29,20 @@ function open-gem() {
 
 function f() { ag --nocolor -l -g "$1" "${2:-.}"  }
 
+function teamo() {
+  PROJECT=$(teamocil --list | fzf)
+  teamocil --here $PROJECT
+}
+
+function tms() {
+  SESSION=$(tmux list-sessions -F '#S' | fzf)
+  tmux attach-session -t "$SESSION"
+}
+
 # Aliases
 alias c='cd ~/Codes/$(ls ~/Codes | fzf)'
 alias ls="ls -G"
 alias myip="ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'"
-alias tms="tmux attach-session -t"
 
 if [[ -f /opt/homebrew/bin/vim ]]; then
   alias vim=/opt/homebrew/bin/vim
