@@ -15,6 +15,7 @@ Plug 'tpope/vim-unimpaired'
 
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'jeffkreeftmeijer/vim-dim'
+Plug 'jeffkreeftmeijer/vim-dim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
@@ -23,7 +24,6 @@ Plug 'morhetz/gruvbox'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'peitalin/vim-jsx-typescript'
-Plug 'rking/vim-detailed'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-ruby/vim-ruby'
 Plug 'w0rp/ale'
@@ -43,14 +43,10 @@ set termguicolors
 
 " Make it pretty
 set background=light
-colo gruvbox
-
-hi Search cterm=none gui=none guifg=#3c3836 guibg=#ebdbb2
-hi IncSearch cterm=none gui=none guifg=#fbf1c7 guibg=#3c3836
-hi Visual cterm=none gui=none guifg=#fbf1c7 guibg=#458588
+colo dim
 
 " Highlight text over 100 chars wide
-hi OverLength guibg=NONE guifg=#af3a03
+hi OverLength guibg=NONE guifg=#cc0000
 match OverLength /\%101v.*/
 
 " Airline
